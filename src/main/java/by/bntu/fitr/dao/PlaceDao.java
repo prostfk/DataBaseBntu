@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlaceDao extends Dao{
+public class PlaceDao extends Dao<Place>{
 
     public List<Place> findAll(){
         ResultSet resultSet = executeWithResult("SELECT * FROM place");
@@ -24,4 +24,8 @@ public class PlaceDao extends Dao{
         return places;
     }
 
+    public void save(Place place) {
+        //language=SQL
+        execute(String.format("INSERT INTO place(row, seat, price) VALUES('%d','%d','d')", place.getRow(),place.getSeat(),place.getPrice()));
+    }
 }

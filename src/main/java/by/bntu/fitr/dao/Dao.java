@@ -6,13 +6,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Properties;
 
-public class Dao {
+public abstract class Dao<Entity> {
 
-    protected Connection connection;
+    private Connection connection;
 
-    public Dao() {
+    Dao() {
         Properties properties = new Properties();
         try {
             properties.load(new FileInputStream("src/main/resources/db.properties"));
@@ -33,7 +34,7 @@ public class Dao {
         }
     }
 
-    public ResultSet executeWithResult(String sql){
+    ResultSet executeWithResult(String sql){
         try {
             return connection.createStatement().executeQuery(sql);
         } catch (SQLException e) {
@@ -41,5 +42,9 @@ public class Dao {
         }
         return null;
     }
+
+    public abstract void save(Entity entity);
+
+    public abstract List<Entity> findAll();
 
 }

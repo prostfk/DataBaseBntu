@@ -989,23 +989,23 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="237" name="perfomance_id">
+    <column id="248" parent="237" name="performance_id">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="237" name="perfomance_date">
+    <column id="249" parent="237" name="performance_date">
       <Position>3</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="237" name="perfomance_time">
+    <column id="250" parent="237" name="performance_time">
       <Position>4</Position>
       <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="251" parent="237" name="perfomance_id">
-      <ColNames>perfomance_id</ColNames>
+      <ColNames>performance_id</ColNames>
       <Type>btree</Type>
     </index>
     <key id="252" parent="237" name="PRIMARY">
@@ -1014,7 +1014,7 @@
       <Primary>1</Primary>
     </key>
     <foreign-key id="253" parent="237" name="poster_ibfk_1">
-      <ColNames>perfomance_id</ColNames>
+      <ColNames>performance_id</ColNames>
       <RefSchemaName>Univer</RefSchemaName>
       <RefTableName>performance</RefTableName>
       <RefColNames>id</RefColNames>
@@ -1031,7 +1031,7 @@
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="238" name="perfomance_id">
+    <column id="256" parent="238" name="performance_id">
       <Position>3</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1044,7 +1044,7 @@
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="258" parent="238" name="perfomance_id">
-      <ColNames>perfomance_id</ColNames>
+      <ColNames>performance_id</ColNames>
       <Type>btree</Type>
     </index>
     <index id="259" parent="238" name="place_id">
@@ -1057,7 +1057,7 @@
       <Primary>1</Primary>
     </key>
     <foreign-key id="261" parent="238" name="sale_ibfk_1">
-      <ColNames>perfomance_id</ColNames>
+      <ColNames>performance_id</ColNames>
       <RefSchemaName>Univer</RefSchemaName>
       <RefTableName>performance</RefTableName>
       <RefColNames>id</RefColNames>

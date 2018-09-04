@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PerformanceDao extends Dao {
+public class PerformanceDao extends Dao<Performance> {
 
     public List<Performance> findAll(){
         //language=SQL
@@ -24,4 +24,8 @@ public class PerformanceDao extends Dao {
         return performances;
     }
 
+    public void save(Performance performance) {
+        //language=SQL
+        execute(String.format("INSERT INTO performance(title) VALUES('%s')", performance.getTitle()));
+    }
 }
